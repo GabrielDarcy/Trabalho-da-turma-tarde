@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Conhecimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="auth-screen" id="authScreen">
+            <div class="auth-card">
+                <h2>Troca de Conhecimento</h2>
+                <p>Faça login ou registre-se para conectar com professores e alunos.</p>
+                <input type="email" placeholder="Seu E-mail" id="emailInput">
+                <input type="password" placeholder="Sua Senha" id="passwordInput">
+                <div class="auth-buttons">
+                    <button class="btn btn-login" onclick="login()">Login</button>
+                    <button class="btn btn-register" onclick="register()">Registrar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard" id="dashboardScreen">
+            <header>
+                <div class="logo">
+                    MEAJUDE! 
+                    <div class="avatar">🚀</div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquise uma habilidade ou um professor...">
+                </div>
+                <div class="header-icons">
+                    <span>💬</span>
+                    <span>✕</span>
+                </div>
+            </header>
+
+            <div class="main-layout">
+                <div class="sidebar-left">
+                    <h3>Categorias</h3>
+                    <div class="menu-item"><a class="ioio" href="">🌐 Cultura & Idiomas</a></div>
+                    <div class="menu-item">💻 Habilidades Técnicas</div>
+                    <div class="menu-item">🎵 Arte & Música</div>
+                </div>
+
+                <div class="feed">
+                    <div class="card card-yellow">
+                        <img src="https://ui-avatars.com/api/?name=Ana&background=random" class="card-img" alt="Foto Ana">
+                        <div class="card-info">
+                            <h4>Ana</h4>
+                            <p>Ensino <strong>Violão</strong></p>
+                            <p>Procuro <strong>Inglês</strong></p>
+                        </div>
+                        <div class="card-icon">🎸</div>
+                    </div>
+
+                    <div class="card card-white">
+                        <img src="https://ui-avatars.com/api/?name=Carlos&background=random" class="card-img" alt="Foto Carlos">
+                        <div class="card-info">
+                            <h4>Carlos</h4>
+                            <p>Ensino <strong>Programação Python</strong></p>
+                            <p>Procuro <strong>Fotografia</strong></p>
+                        </div>
+                        <div class="card-icon">💻</div>
+                    </div>
+
+                    <div class="card card-green">
+                        <img src="https://ui-avatars.com/api/?name=Maria&background=random" class="card-img" alt="Foto Maria">
+                        <div class="card-info">
+                            <h4>Maria</h4>
+                            <p>Ensino <strong>Culinária Vegana</strong></p>
+                            <p>Procuro <strong>Matemática</strong></p>
+                            <button class="btn-contact">Contactar</button>
+                        </div>
+                        <div class="card-icon">🥗</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-right">
+                    <div class="legend-box">
+                        <hr style="border: 0; border-top: 1px solid #f3f4f6; margin: 15px 0;">
+                        <div class="legend-item"><div class="color-box bg-yellow"></div> Destaque</div>
+                        <div class="legend-item"><div class="color-box bg-white"></div> Offline</div>
+                        <div class="legend-item"><div class="color-box bg-green"></div> Online</div>
+                        <hr style="border: 0; border-top: 1px solid #f3f4f6; margin: 15px 0;">
+                    </div>
+
+                    <div class="bottom-actions">
+                        <div class="action-item">
+                            <span class="action-icon">📁</span>
+                            ARQUIVO<br>
+                        </div>
+                        <div class="action-item">
+                            <span class="action-icon">📌</span>
+                            ANÚNCIOS<br>FIXOS
+                        </div>
+                        <div class="action-item">
+                            <span class="action-icon">⭐</span>
+                            <br>FAVORITOS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
