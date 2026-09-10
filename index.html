@@ -1,109 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troca de Conhecimento</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="app-container">
-        <div class="auth-screen" id="authScreen">
-            <div class="auth-card">
-                <h2>Troca de Conhecimento</h2>
-                <p>Faça login ou registre-se para conectar com professores e alunos.</p>
-                <input type="email" placeholder="Seu E-mail" id="emailInput">
-                <input type="password" placeholder="Sua Senha" id="passwordInput">
-                <div class="auth-buttons">
-                    <button class="btn btn-login" onclick="login()">Login</button>
-                    <button class="btn btn-register" onclick="register()">Registrar</button>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Amor | Doação e Adoção</title>
+    <meta
+      name="description"
+      content="Plataforma para adoção, doação e ajuda a animais em situação de vulnerabilidade."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrapper">
+        <div class="brand">
+          <span class="brand-mark">🐾</span>
+          <span>Pet Amor</span>
         </div>
 
-        <div class="dashboard" id="dashboardScreen">
-            <header>
-                <div class="logo">
-                    MEAJUDE! 
-                    <div class="avatar">🚀</div>
-                </div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Pesquise uma habilidade ou um professor...">
-                </div>
-                <div class="header-icons">
-                    <span>💬</span>
-                    <span>✕</span>
-                </div>
-            </header>
+        <nav class="nav">
+          <a href="#inicio">Início</a>
+          <a href="#adocao">Adoção</a>
+          <a href="#doacoes">Doações</a>
+          <a href="#sobre">Sobre</a>
+        </nav>
 
-            <div class="main-layout">
-                <div class="sidebar-left">
-                    <h3>Categorias</h3>
-                    <div class="menu-item"><a class="ioio" href="">🌐 Cultura & Idiomas</a></div>
-                    <div class="menu-item">💻 Habilidades Técnicas</div>
-                    <div class="menu-item">🎵 Arte & Música</div>
-                </div>
-
-                <div class="feed">
-                    <div class="card card-yellow">
-                        <img src="https://ui-avatars.com/api/?name=Ana&background=random" class="card-img" alt="Foto Ana">
-                        <div class="card-info">
-                            <h4>Ana</h4>
-                            <p>Ensino <strong>Violão</strong></p>
-                            <p>Procuro <strong>Inglês</strong></p>
-                        </div>
-                        <div class="card-icon">🎸</div>
-                    </div>
-
-                    <div class="card card-white">
-                        <img src="https://ui-avatars.com/api/?name=Carlos&background=random" class="card-img" alt="Foto Carlos">
-                        <div class="card-info">
-                            <h4>Carlos</h4>
-                            <p>Ensino <strong>Programação Python</strong></p>
-                            <p>Procuro <strong>Fotografia</strong></p>
-                        </div>
-                        <div class="card-icon">💻</div>
-                    </div>
-
-                    <div class="card card-green">
-                        <img src="https://ui-avatars.com/api/?name=Maria&background=random" class="card-img" alt="Foto Maria">
-                        <div class="card-info">
-                            <h4>Maria</h4>
-                            <p>Ensino <strong>Culinária Vegana</strong></p>
-                            <p>Procuro <strong>Matemática</strong></p>
-                            <button class="btn-contact">Contactar</button>
-                        </div>
-                        <div class="card-icon">🥗</div>
-                    </div>
-                </div>
-
-                <div class="sidebar-right">
-                    <div class="legend-box">
-                        <hr style="border: 0; border-top: 1px solid #f3f4f6; margin: 15px 0;">
-                        <div class="legend-item"><div class="color-box bg-yellow"></div> Destaque</div>
-                        <div class="legend-item"><div class="color-box bg-white"></div> Offline</div>
-                        <div class="legend-item"><div class="color-box bg-green"></div> Online</div>
-                        <hr style="border: 0; border-top: 1px solid #f3f4f6; margin: 15px 0;">
-                    </div>
-
-                    <div class="bottom-actions">
-                        <div class="action-item">
-                            <span class="action-icon">📁</span>
-                            ARQUIVO<br>
-                        </div>
-                        <div class="action-item">
-                            <span class="action-icon">📌</span>
-                            ANÚNCIOS<br>FIXOS
-                        </div>
-                        <div class="action-item">
-                            <span class="action-icon">⭐</span>
-                            <br>FAVORITOS
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="nav-actions">
+          <button class="btn btn-light">Entrar</button>
+          <button class="btn btn-primary">Quero ajudar</button>
         </div>
-    </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="badge">🐶 Resgate com amor</span>
+            <h1>Transforme a vida de um animal com uma adoção ou doação.</h1>
+            <p>
+              Conectamos pets resgatados com pessoas que querem dar abrigo, cuidado,
+              carinho e uma nova chance de viver com dignidade.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary">Adotar agora</button>
+              <button class="btn btn-secondary">Fazer doação</button>
+            </div>
+
+            <div class="stats">
+              <div>
+                <strong>1.250+</strong>
+                <span>animais resgatados</span>
+              </div>
+              <div>
+                <strong>420+</strong>
+                <span>famílias acolhedoras</span>
+              </div>
+              <div>
+                <strong>96%</strong>
+                <span>taxa de adoção</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Pets para adoção">
+            <div class="pet-card main-pet">
+              <img
+                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80"
+                alt="Cachorro caramelo"
+              />
+              <div class="pet-card-info">
+                <h3>Luna</h3>
+                <p>Fofinha e muito brincalhona</p>
+              </div>
+            </div>
+            <div class="mini-card mini-top">
+              <span>🏠 180 lares</span>
+            </div>
+            <div class="mini-card mini-bottom">
+              <span>💛 52 doações hoje</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="adocao">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Adoção responsável</span>
+            <h2>Pets que esperam por um lar</h2>
+          </div>
+
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="cachorro">Cachorros</button>
+            <button class="filter-btn" data-filter="gato">Gatos</button>
+            <button class="filter-btn" data-filter="outros">Outros</button>
+          </div>
+
+          <div class="pet-grid" id="petGrid"></div>
+        </div>
+      </section>
+
+      <section class="section support" id="doacoes">
+        <div class="container support-grid">
+          <div class="support-copy">
+            <span class="eyebrow">Como ajudar</span>
+            <h2>Seu gesto muda a vida de um animal.</h2>
+            <p>
+              Doações em ração, remédios, materiais de limpeza e ajuda financeira
+              garantem alimentação e atendimento para pets em abrigos e resgates.
+            </p>
+            <ul>
+              <li>💊 Medicamentos e vacinas</li>
+              <li>🥩 Ração e itens de higiene</li>
+              <li>💰 Apoio financeiro para tratamentos</li>
+            </ul>
+          </div>
+
+          <form class="donation-form" id="donationForm">
+            <h3>Fazer uma doação</h3>
+            <label>
+              Nome
+              <input type="text" id="name" placeholder="Seu nome" required />
+            </label>
+            <label>
+              E-mail
+              <input type="email" id="email" placeholder="seu@email.com" required />
+            </label>
+            <label>
+              Tipo de ajuda
+              <select id="type">
+                <option value="financeira">Financeira</option>
+                <option value="racao">Ração</option>
+                <option value="medicamentos">Medicamentos</option>
+                <option value="voluntariado">Voluntariado</option>
+              </select>
+            </label>
+            <label>
+              Valor ou descrição
+              <textarea id="message" rows="4" placeholder="Ex.: R$ 50 para alimentação mensal"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary full">Enviar apoio</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section about" id="sobre">
+        <div class="container about-grid">
+          <div class="about-card">
+            <span class="eyebrow">Nossa missão</span>
+            <h2>Dar uma segunda chance a quem precisa.</h2>
+          </div>
+          <div class="about-card muted">
+            <p>
+              A Pet Amor atua com resgate, cuidado, adoção e campanhas de arrecadação
+              para transformar a rotina de animais abandonados em um futuro seguro,
+              saudável e cheio de amor.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 Pet Amor. Juntos por uma causa maior.</p>
+        <div class="socials">Instagram • Facebook • WhatsApp</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
