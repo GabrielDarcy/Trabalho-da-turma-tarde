@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pet Amor | Doação e Adoção</title>
+    <title>Pet Amor | Início</title>
     <meta
       name="description"
-      content="Plataforma para adoção, doação e ajuda a animais em situação de vulnerabilidade."
+      content="Página inicial da Pet Amor com adoção, doação e ajuda para animais."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,45 +16,45 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header class="topbar">
-      <div class="container nav-wrapper">
-        <div class="brand">
-          <span class="brand-mark">🐾</span>
+  <body data-page="home">
+    <header class="home-header">
+      <div class="container home-nav">
+        <div class="brand-row">
+          <span class="brand-icon">🐾</span>
           <span>Pet Amor</span>
         </div>
 
-        <nav class="nav">
+        <nav class="home-links">
           <a href="#inicio">Início</a>
-          <a href="#adocao">Adoção</a>
-          <a href="#doacoes">Doações</a>
+          <a href="#adoes">Adoção</a>
+          <a href="#ajuda">Como ajudar</a>
           <a href="#sobre">Sobre</a>
         </nav>
 
-        <div class="nav-actions">
-          <button class="btn btn-light">Entrar</button>
-          <button class="btn btn-primary">Quero ajudar</button>
+        <div class="home-actions" id="homeUserActions">
+          <a href="login.html" class="btn btn-secondary">Entrar</a>
+          <a href="register.html" class="btn btn-primary">Cadastrar</a>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="hero" id="inicio">
-        <div class="container hero-grid">
-          <div class="hero-copy">
+      <section class="home-hero" id="inicio">
+        <div class="container home-hero-grid">
+          <div class="home-copy">
             <span class="badge">🐶 Resgate com amor</span>
-            <h1>Transforme a vida de um animal com uma adoção ou doação.</h1>
+            <h1>Seu gesto pode dar uma nova chance a um animal.</h1>
             <p>
-              Conectamos pets resgatados com pessoas que querem dar abrigo, cuidado,
-              carinho e uma nova chance de viver com dignidade.
+              A Pet Amor conecta pets em situação de vulnerabilidade com pessoas dispostas
+              a acolher, doar e transformar vidas com carinho, respeito e dedicação.
             </p>
 
-            <div class="hero-actions">
-              <button class="btn btn-primary">Adotar agora</button>
-              <button class="btn btn-secondary">Fazer doação</button>
+            <div class="home-actions-row">
+              <a href="register.html" class="btn btn-primary">Quero ajudar</a>
+              <a href="login.html" class="btn btn-secondary">Acessar painel</a>
             </div>
 
-            <div class="stats">
+            <div class="home-stats">
               <div>
                 <strong>1.250+</strong>
                 <span>animais resgatados</span>
@@ -70,114 +70,120 @@
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="Pets para adoção">
-            <div class="pet-card main-pet">
+          <div class="home-visual">
+            <div class="home-card-image">
               <img
                 src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80"
-                alt="Cachorro caramelo"
+                alt="Cachorro resgatado"
               />
-              <div class="pet-card-info">
-                <h3>Luna</h3>
-                <p>Fofinha e muito brincalhona</p>
-              </div>
             </div>
-            <div class="mini-card mini-top">
-              <span>🏠 180 lares</span>
-            </div>
-            <div class="mini-card mini-bottom">
-              <span>💛 52 doações hoje</span>
-            </div>
+            <div class="floating-tag tag-top">🏠 180 lares</div>
+            <div class="floating-tag tag-bottom">💛 52 doações hoje</div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="adocao">
+      <section class="home-section recent-posts-section" id="recentes">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-title section-title-row">
+            <div>
+              <span class="eyebrow">Novidades</span>
+              <h2>Posts recentes de adoção</h2>
+            </div>
+            <a href="#adoes" class="text-link">Ver categorias</a>
+          </div>
+
+          <div class="recent-posts-grid" id="recentPosts"></div>
+        </div>
+      </section>
+
+      <section class="home-section" id="adoes">
+        <div class="container">
+          <div class="section-title">
             <span class="eyebrow">Adoção responsável</span>
-            <h2>Pets que esperam por um lar</h2>
+            <h2>Pets esperando por um lar</h2>
           </div>
 
-          <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="cachorro">Cachorros</button>
-            <button class="filter-btn" data-filter="gato">Gatos</button>
-            <button class="filter-btn" data-filter="outros">Outros</button>
-          </div>
+          <div class="carousel-shell">
+            <button class="carousel-control" type="button" id="previousCategory" aria-label="Categoria anterior">&#8592;</button>
+            <div class="pet-showcase adoption-categories" id="adoptionCarousel">
+              <a class="pet-box category-card" href="gato.html">
+              <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&w=800&q=80" alt="Gato disponível para adoção" />
+              <div class="pet-box-body">
+                <h3>Gato</h3>
+                <p>Encontre gatos esperando por uma família.</p>
+                <span>Ver gatos</span>
+              </div>
+              </a>
 
-          <div class="pet-grid" id="petGrid"></div>
+              <a class="pet-box category-card" href="cachorro.html">
+              <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Cachorro disponível para adoção" />
+              <div class="pet-box-body">
+                <h3>Cachorro</h3>
+                <p>Conheça cachorros em busca de um lar.</p>
+                <span>Ver cachorros</span>
+              </div>
+              </a>
+
+              <a class="pet-box category-card" href="outros.html">
+              <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=800&q=80" alt="Outros animais disponíveis para adoção" />
+              <div class="pet-box-body">
+                <h3>Outros</h3>
+                <p>Ajude outros animais a encontrarem um lar.</p>
+                <span>Ver outros animais</span>
+              </div>
+              </a>
+            </div>
+            <button class="carousel-control" type="button" id="nextCategory" aria-label="Próxima categoria">&#8594;</button>
+          </div>
         </div>
       </section>
 
-      <section class="section support" id="doacoes">
-        <div class="container support-grid">
-          <div class="support-copy">
+      <section class="home-section alt" id="ajuda">
+        <div class="container home-help-grid">
+          <div>
             <span class="eyebrow">Como ajudar</span>
-            <h2>Seu gesto muda a vida de um animal.</h2>
+            <h2>Seu gesto transforma a vida de um animal.</h2>
             <p>
-              Doações em ração, remédios, materiais de limpeza e ajuda financeira
-              garantem alimentação e atendimento para pets em abrigos e resgates.
+              Você pode doar ração, remédios, materiais de limpeza e também ajudar com
+              apoio financeiro para tratamentos e cuidados básicos.
             </p>
-            <ul>
-              <li>💊 Medicamentos e vacinas</li>
-              <li>🥩 Ração e itens de higiene</li>
-              <li>💰 Apoio financeiro para tratamentos</li>
-            </ul>
           </div>
 
-          <form class="donation-form" id="donationForm">
-            <h3>Fazer uma doação</h3>
-            <label>
-              Nome
-              <input type="text" id="name" placeholder="Seu nome" required />
-            </label>
-            <label>
-              E-mail
-              <input type="email" id="email" placeholder="seu@email.com" required />
-            </label>
-            <label>
-              Tipo de ajuda
-              <select id="type">
-                <option value="financeira">Financeira</option>
-                <option value="racao">Ração</option>
-                <option value="medicamentos">Medicamentos</option>
-                <option value="voluntariado">Voluntariado</option>
-              </select>
-            </label>
-            <label>
-              Valor ou descrição
-              <textarea id="message" rows="4" placeholder="Ex.: R$ 50 para alimentação mensal"></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary full">Enviar apoio</button>
-          </form>
+          <ul class="help-list">
+            <li>💰 Apoio financeiro para tratamentos</li>
+            <li>🤝 Voluntariado e acolhimento</li>
+          </ul>
         </div>
       </section>
 
-      <section class="section about" id="sobre">
-        <div class="container about-grid">
-          <div class="about-card">
+      <section class="home-section" id="sobre">
+        <div class="container home-about">
+          <div class="about-panel">
             <span class="eyebrow">Nossa missão</span>
             <h2>Dar uma segunda chance a quem precisa.</h2>
           </div>
-          <div class="about-card muted">
+          <div class="about-panel soft">
             <p>
-              A Pet Amor atua com resgate, cuidado, adoção e campanhas de arrecadação
-              para transformar a rotina de animais abandonados em um futuro seguro,
-              saudável e cheio de amor.
+              A Pet Amor promove resgates, cuidado, adoção e campanhas de arrecadação para
+              transformar a rotina de animais abandonados em um futuro seguro, saudável e cheio de amor.
             </p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-inner">
+    <footer class="home-footer">
+      <div class="container footer-row">
         <p>© 2026 Pet Amor. Juntos por uma causa maior.</p>
-        <div class="socials">Instagram • Facebook • WhatsApp</div>
+        <div class="footer-links" aria-label="Redes sociais">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+        </div>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Amor | Nova publicação</title>
+    <meta name="description" content="Crie uma nova publicação para adoção ou ajuda de animais." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="create-post">
+    <header class="home-header">
+      <div class="container home-nav">
+        <div class="brand-row">
+          <span class="brand-icon">🐾</span>
+          <span>Pet Amor</span>
+        </div>
+
+        <nav class="home-links">
+          <a href="index.html">Início</a>
+          <a href="index.html#adoes">Adoções</a>
+          <a href="index.html#ajuda">Como ajudar</a>
+        </nav>
+
+        <div class="home-actions" id="homeUserActions">
+          <a href="index.html" class="btn btn-secondary">Voltar</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="create-post-layout">
+      <form id="createPostForm" class="create-post-form">
+        <div class="form-top">
+          <span class="eyebrow">Nova publicação</span>
+          <h2>Publicar pet para adoção ou ajuda</h2>
+        </div>
+
+        <div class="form-grid">
+          <label class="full-span">
+            Título da publicação
+            <input type="text" name="title" placeholder="Ex.: Bella precisa de um lar" required />
+          </label>
+
+          <label class="full-span">
+            Descrição
+            <textarea name="description" placeholder="Conte um pouco sobre a história, comportamento e necessidades do animal." required></textarea>
+          </label>
+
+          <label>
+            Tipo de animal
+            <select name="animalType" required>
+              <option value="">Selecione</option>
+              <option value="Cachorro">Cachorro</option>
+              <option value="Gato">Gato</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </label>
+
+          <label>
+            Raça
+            <input type="text" name="breed" placeholder="Ex.: Vira-lata, Siamesa..." />
+          </label>
+
+          <label>
+            Cidade
+            <input type="text" name="city" placeholder="Sua cidade" required />
+          </label>
+
+          <label>
+            Estado
+            <input type="text" name="state" placeholder="SP" maxlength="2" required />
+          </label>
+
+          <label>
+            Telefone de contato
+            <input type="tel" name="phone" placeholder="(11) 99999-0000" />
+          </label>
+
+          <label>
+            E-mail de contato
+            <input type="email" name="email" placeholder="contato@email.com" />
+          </label>
+
+          <label class="full-span">
+            Redes sociais / WhatsApp
+            <input type="text" name="socials" placeholder="@petamor, +55 11 ..." />
+          </label>
+
+          <label class="full-span">
+            Foto do animal
+            <input type="file" name="photo" accept="image/jpeg,image/png" required />
+          </label>
+        </div>
+
+        <div class="home-actions-row" style="margin-top: 24px;">
+          <button type="submit" class="btn btn-primary">Salvar publicação</button>
+          <a href="index.html" class="btn btn-secondary">Cancelar</a>
+        </div>
+      </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

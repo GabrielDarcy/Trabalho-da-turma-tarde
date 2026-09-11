@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Amor | Login</title>
+    <meta name="description" content="Login do sistema de adoção e doação de animais." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="login">
+    <div class="auth-shell">
+      <div class="auth-panel auth-visual">
+        <a class="badge auth-brand" href="index.html" aria-label="Voltar para o início da Pet Amor">🐾 Pet Amor</a>
+        <h1>Ajude a transformar vidas com um novo lar.</h1>
+        <p>
+          Acompanhe adoções, anuncie pets para adoção e gerencie doações em um único
+          painel seguro.
+        </p>
+        <div class="mini-feature-list">
+          <span>💛 Doações</span>
+          <span>🐶 Adoções</span>
+          <span>🛡️ Segurança</span>
+        </div>
+      </div>
+
+      <div class="auth-panel auth-form-panel">
+        <form id="loginForm" class="auth-form">
+          <div class="form-top">
+            <h2>Entrar</h2>
+          </div>
+
+          <label>
+            E-mail
+            <input type="email" id="loginEmail" placeholder="seu@email.com" required />
+          </label>
+
+          <label>
+            Senha
+            <input type="password" id="loginPassword" placeholder="Sua senha" required />
+          </label>
+
+          <button type="submit" class="btn btn-primary full">Entrar</button>
+
+          <p class="switch-link">
+            Ainda não tem conta?
+            <a href="register.html">Criar conta</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

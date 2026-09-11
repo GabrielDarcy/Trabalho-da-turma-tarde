@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Amor | Registrar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="register">
+    <div class="auth-shell">
+      <div class="auth-panel auth-visual">
+        <a class="badge auth-brand" href="index.html" aria-label="Voltar para o início da Pet Amor">🐾 Pet Amor</a>
+        <h1>Crie sua conta e faça parte da mudança.</h1>
+        <p>
+          Cadastre-se para anunciar pets, acompanhar doações e apoiar causas de proteção animal.
+        </p>
+        <div class="mini-feature-list">
+          <span>📣 Anunciar pets</span>
+          <span>💸 Apoiar causas</span>
+          <span>🤝 Comunidade</span>
+        </div>
+      </div>
+
+      <div class="auth-panel auth-form-panel">
+        <form id="registerForm" class="auth-form">
+          <div class="form-top">
+            <span class="eyebrow">Cadastro</span>
+            <h2>Criar conta</h2>
+          </div>
+
+          <label>
+            Nome completo
+            <input type="text" id="registerName" placeholder="Seu nome" required />
+          </label>
+
+          <label>
+            E-mail
+            <input type="email" id="registerEmail" placeholder="seu@email.com" required />
+          </label>
+
+          <label>
+            Senha
+            <input type="password" id="registerPassword" placeholder="Crie uma senha" required />
+            <div class="password-strength" aria-live="polite">
+              <div class="password-strength-bar" id="passwordStrengthBar"></div>
+            </div>
+            <small id="passwordStrengthText">Sua senha deve ter pelo menos 8 caracteres.</small>
+          </label>
+
+          <label>
+            Confirmar senha
+            <input type="password" id="registerConfirmPassword" placeholder="Repita a senha" required />
+          </label>
+
+          <button type="submit" class="btn btn-primary full">Cadastrar</button>
+
+          <p class="switch-link">
+            Já tem conta?
+            <a href="login.html">Entrar</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

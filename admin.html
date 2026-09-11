@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Amor | Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="admin">
+    <div class="admin-shell">
+      <header class="admin-topbar">
+        <div class="brand-row">
+          <span class="brand-icon">🐾</span>
+          <span>Pet Amor Admin</span>
+        </div>
+
+        <button class="btn btn-secondary" id="logoutButton">Sair</button>
+      </header>
+
+      <main class="admin-content">
+        <div class="admin-header">
+          <div>
+            <span class="eyebrow">Painel administrativo</span>
+            <h1>Moderação e gestão</h1>
+          </div>
+        </div>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <span>Anúncios ativos</span>
+            <strong id="totalAds">0</strong>
+          </article>
+
+          <article class="stat-card">
+            <span>Usuários ativos</span>
+            <strong id="totalUsers">0</strong>
+          </article>
+
+          <article class="stat-card">
+            <span>Usuários banidos</span>
+            <strong id="totalBans">0</strong>
+          </article>
+        </section>
+
+        <section class="admin-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Anúncios</h2>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Título</th>
+                    <th>Pet</th>
+                    <th>Responsável</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                  </tr>
+                </thead>
+                <tbody id="adsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Usuários</h2>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Tipo</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                  </tr>
+                </thead>
+                <tbody id="usersTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
